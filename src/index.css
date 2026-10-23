@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    min-height: 100vh;
+  }
+
+  .dark body {
+    background-color: #080808;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(214, 197, 161, 0.05) 0%, transparent 60%),
+      radial-gradient(circle at 100% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 40%);
+    color: #F4F2EF;
+  }
+
+  .light body {
+    background-color: #F7F6F2;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(155, 126, 72, 0.06) 0%, transparent 60%),
+      radial-gradient(circle at 0% 100%, rgba(0, 0, 0, 0.02) 0%, transparent 50%);
+    color: #141312;
+  }
+
+  ::selection {
+    background-color: #D6C5A1;
+    color: #080808;
+  }
+
+  .light ::selection {
+    background-color: #E6D8BA;
+    color: #141312;
+  }
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Hide scrollbar for clean luxury feel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "NOIR — Luxury Expense Tracker",
+  "description": "Minimalist luxury personal expense tracker featuring a tactile vertical amount wheel, automatic logging, and refined financial insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
