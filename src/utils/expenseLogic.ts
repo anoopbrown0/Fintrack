@@ -63,6 +63,9 @@ export function calculateMonthTotal(expenses: Expense[], refDate: Date = new Dat
     .reduce((sum, e) => sum + e.amount, 0);
 }
 
+export const calculateMonthlyTotal = calculateMonthTotal;
+
+
 /**
  * Calculate budget metrics (remaining, percentage used, savings percentage)
  */
